@@ -17,8 +17,6 @@ class ApplicationController < ActionController::API
 
       puts "Time expiry: #{time}"
       puts "Time now: #{Time.now}"
-
-      debugger
       
     if @decoded[:exp].present? && Time.now > time
       render json: { error: 'Token expired' }, status: :unauthorized

@@ -12,7 +12,7 @@ class Book < ApplicationRecord
   
 
   validates :author, :language , :publication_date, presence: true
-  validates :name, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: { scope: :library_id }
 
 
   private
