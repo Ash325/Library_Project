@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  no_of_book: 1
+  library: one
+
+two:
+  name: MyString
+  no_of_book: 1
+  library: two
