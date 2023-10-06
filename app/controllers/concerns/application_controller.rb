@@ -13,10 +13,7 @@ class ApplicationController < ActionController::API
       @decoded = JsonWebToken.decode(header)
       @current_user = User.find(@decoded[:user_id])
       role = @current_user.role
-      time=Time.at(@decoded[:exp])
-
-      puts "Time expiry: #{time}"
-      puts "Time now: #{Time.now}"
+      time=Time.at(@decoded[:exp])  
       
     if @decoded[:exp].present? && Time.now > time
       render json: { error: 'Token expired' }, status: :unauthorized

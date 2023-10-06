@@ -60,7 +60,7 @@ class Api::V1::BooksController < ApplicationController
     end
   
     def book_params
-      params.permit(:name, :author, :language, :publication_date, :category_id)
+      params.permit(:name, :author, :language, :publication_date, :category_id, :library_id)
     end
   
     def set_book

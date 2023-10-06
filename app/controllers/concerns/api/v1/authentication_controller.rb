@@ -9,7 +9,7 @@ class Api::V1::AuthenticationController < ApplicationController
       token = JsonWebToken.encode(user_id: @user.id)
       
       
-      time = Time.now + 5.minutes
+      time = Time.now + 10.minutes
       puts "Time value: #{time}"       
       render json: { token: token, exp: time.strftime("%m-%d-%Y %H:%M"),
                      username: @user.username }, status: :ok

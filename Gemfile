@@ -48,3 +48,5 @@ group :development do
   # gem "spring"
 end
 
+
+gem "rails-erd", "~> 1.7"
